@@ -21,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "eslint --fix --ext .ts,.tsx ./src",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -45,6 +46,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "prettier": "^2.8.4"
   },
   "husky": {
@@ -53,9 +56,8 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "git add"
+    "**/*.{ts,tsx}": [
+      "npm run lint"
     ]
   }
 }
