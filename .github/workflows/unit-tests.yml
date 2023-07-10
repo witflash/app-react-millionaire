@@ -1,0 +1,19 @@
+name: Lint
+
+on: pull_request
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Unit Tests
+        run: npm test -- --watchAll=false
