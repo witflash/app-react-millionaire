@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/app-react-millionaire/static/css/main.6e41a406.css",
+    "main.js": "/app-react-millionaire/static/js/main.68c5c2a2.js",
+    "index.html": "/app-react-millionaire/index.html",
+    "main.6e41a406.css.map": "/app-react-millionaire/static/css/main.6e41a406.css.map",
+    "main.68c5c2a2.js.map": "/app-react-millionaire/static/js/main.68c5c2a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e41a406.css",
+    "static/js/main.68c5c2a2.js"
+  ]
+}
