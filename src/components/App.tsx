@@ -1,14 +1,16 @@
-import React from 'react';
 import { Loader } from 'components/Loader';
-import './App.css';
+import { useSelector } from 'react-redux';
+import { RootState } from 'store';
+import { GameStatus } from 'store/types';
 
 function App() {
+  const gameStatus = useSelector((state: RootState) => state.gameStatus.value);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Loader />
-      </header>
-    </div>
+    <>
+      {gameStatus === GameStatus.upcoming && <Loader />}
+      {gameStatus === GameStatus.ongoing && <p>Game has started</p>}
+    </>
   );
 }
 
