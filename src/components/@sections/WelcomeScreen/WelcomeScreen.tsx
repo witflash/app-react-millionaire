@@ -1,16 +1,14 @@
 import { memo, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState, GameStatus, changeGameState } from 'store';
+import { useDispatch } from 'react-redux';
+import { GameStatus, changeGameStatus } from 'store';
 import thumbImage from 'images/thumb.svg';
 import styles from './WelcomeScreen.module.scss';
 
 function WelcomeScreen() {
-  const gameStatus = useSelector((state: RootState) => state.gameStatus.value);
   const dispatch = useDispatch();
-  console.log('gameStatus: ', gameStatus);
 
   const handleStartClick = useCallback(() => {
-    dispatch(changeGameState(GameStatus.ongoing));
+    dispatch(changeGameStatus(GameStatus.ongoing));
   }, [dispatch]);
 
   return (
