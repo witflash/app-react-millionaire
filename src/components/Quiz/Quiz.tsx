@@ -1,12 +1,17 @@
 import { memo } from 'react';
 import { Frame } from 'components/Frame';
 
+import { QuizQuestion } from 'common/types';
 import styles from './Quiz.module.scss';
 
-function Quiz() {
+interface QuizProps {
+  question: QuizQuestion;
+}
+
+function Quiz({ question }: QuizProps) {
   return (
     <div className={styles.block}>
-      <p>Question</p>
+      <p>{question.text}</p>
       <Frame>
         <p>Text</p>
       </Frame>

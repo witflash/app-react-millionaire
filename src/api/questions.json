@@ -1,0 +1,292 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "In what children's game are participants chased by someone designated \"It\"?",
+      "answers": [
+        {
+          "id": 1,
+          "text": "Tag"
+        },
+        {
+          "id": 2,
+          "text": "Simon Says"
+        },
+        {
+          "id": 3,
+          "text": "Charades"
+        },
+        {
+          "id": 4,
+          "text": "Hopscotch"
+        }
+      ],
+      "correctAnswerIds": [1],
+      "earning": 500
+    },
+    {
+      "id": 2,
+      "text": "On a radio, stations are changed by using what control?",
+      "answers": [
+        {
+          "id": 5,
+          "text": "Tuning"
+        },
+        {
+          "id": 6,
+          "text": "Volume"
+        },
+        {
+          "id": 7,
+          "text": "Bass"
+        },
+        {
+          "id": 8,
+          "text": "Treble"
+        }
+      ],
+      "correctAnswerIds": [5],
+      "earning": 1000
+    },
+    {
+      "id": 3,
+      "text": "Which material is most dense?",
+      "answers": [
+        {
+          "id": 9,
+          "text": "Silver"
+        },
+        {
+          "id": 10,
+          "text": "Styrofoam"
+        },
+        {
+          "id": 11,
+          "text": "Butter"
+        },
+        {
+          "id": 12,
+          "text": "Gold"
+        }
+      ],
+      "correctAnswerIds": [12],
+      "earning": 2000
+    },
+    {
+      "id": 4,
+      "text": "Galileo was an Italian astronomer who",
+      "answers": [
+        {
+          "id": 13,
+          "text": "developed the telescope"
+        },
+        {
+          "id": 14,
+          "text": "discovered four satellites of Jupiter"
+        },
+        {
+          "id": 15,
+          "text": "discovered that the movement of pendulum produces a regular time measurement"
+        },
+        {
+          "id": 16,
+          "text": "All of the above"
+        }
+      ],
+      "correctAnswerIds": [16],
+      "earning": 4000
+    },
+    {
+      "id": 5,
+      "text": "Oscar Awards were instituted in",
+      "answers": [
+        {
+          "id": 17,
+          "text": "1968"
+        },
+        {
+          "id": 18,
+          "text": "1929"
+        },
+        {
+          "id": 19,
+          "text": "1901"
+        },
+        {
+          "id": 20,
+          "text": "1965"
+        }
+      ],
+      "correctAnswerIds": [18],
+      "earning": 8000
+    },
+    {
+      "id": 6,
+      "text": "What does the \"F\" stand for in FBI?",
+      "answers": [
+        {
+          "id": 21,
+          "text": "Foreign"
+        },
+        {
+          "id": 22,
+          "text": "Federal"
+        },
+        {
+          "id": 23,
+          "text": "Flappy"
+        },
+        {
+          "id": 24,
+          "text": "Face"
+        }
+      ],
+      "correctAnswerIds": [22],
+      "earning": 16000
+    },
+    {
+      "id": 7,
+      "text": "Which album was released by Muse",
+      "answers": [
+        {
+          "id": 25,
+          "text": "The Dark side of the Moon"
+        },
+        {
+          "id": 26,
+          "text": "Absolution"
+        },
+        {
+          "id": 27,
+          "text": "Origin of Symmetry"
+        },
+        {
+          "id": 28,
+          "text": "Yellow Submarine"
+        }
+      ],
+      "correctAnswerIds": [26, 27],
+      "earning": 32000
+    },
+    {
+      "id": 8,
+      "text": "The ozone layer restricts",
+      "answers": [
+        {
+          "id": 29,
+          "text": "Visible light"
+        },
+        {
+          "id": 30,
+          "text": "Infrared radiation"
+        },
+        {
+          "id": 31,
+          "text": "X-rays and gamma rays"
+        },
+        {
+          "id": 32,
+          "text": "Ultraviolet radiation"
+        }
+      ],
+      "correctAnswerIds": [32],
+      "earning": 64000
+    },
+    {
+      "id": 9,
+      "text": "When did US astronauts Neil Armstrong and Edwin E. Aldrin land on the moon?",
+      "answers": [
+        {
+          "id": 33,
+          "text": "July 21, 1969"
+        },
+        {
+          "id": 34,
+          "text": "July 21, 1970"
+        },
+        {
+          "id": 35,
+          "text": "July 21, 1963"
+        },
+        {
+          "id": 36,
+          "text": "July 21, 1972"
+        }
+      ],
+      "correctAnswerIds": [33],
+      "earning": 125000
+    },
+    {
+      "id": 10,
+      "text": "What are the three primary colors?",
+      "answers": [
+        {
+          "id": 37,
+          "text": "Red, green, blue"
+        },
+        {
+          "id": 38,
+          "text": "Magenta, pink, cyan"
+        },
+        {
+          "id": 39,
+          "text": "Yellow, salmon, brown"
+        },
+        {
+          "id": 40,
+          "text": "White, grey, black"
+        }
+      ],
+      "correctAnswerIds": [37],
+      "earning": 250000
+    },
+    {
+      "id": 11,
+      "text": "What is the second most common gas in the air?",
+      "answers": [
+        {
+          "id": 41,
+          "text": "Nitrogen"
+        },
+        {
+          "id": 22,
+          "text": "Oxygen"
+        },
+        {
+          "id": 43,
+          "text": "Water"
+        },
+        {
+          "id": 44,
+          "text": "Helium"
+        }
+      ],
+      "correctAnswerIds": [22],
+      "earning": 500000
+    },
+    {
+      "id": 12,
+      "text": "Which the best book summary app?",
+      "answers": [
+        {
+          "id": 45,
+          "text": "Headway"
+        },
+        {
+          "id": 46,
+          "text": "Headway"
+        },
+        {
+          "id": 47,
+          "text": "Headway"
+        },
+        {
+          "id": 48,
+          "text": "Headway"
+        }
+      ],
+      "correctAnswerIds": [45, 46, 47, 48],
+      "earning": 1000000
+    }
+  ]
+}
