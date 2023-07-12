@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { RootState, GameStatus } from 'store';
-import { WelcomeScreen } from 'components/@sections/WelcomeScreen';
-import { Playground } from 'components/@sections/Playground';
-import { FinalResults } from 'components/@sections/FinalResults';
+import { WelcomeScreen } from 'pages/WelcomeScreen';
+import { Playground } from 'pages/Playground';
+import { FinalResults } from 'pages/FinalResults';
 import 'styles/base.scss';
 
 function App() {

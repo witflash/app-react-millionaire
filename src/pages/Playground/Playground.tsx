@@ -1,10 +1,9 @@
 import { memo, useCallback, useEffect, useState } from 'react';
-import cx from 'classnames';
-import { Quiz } from 'components/Quiz';
-
-import { Burger } from 'components/@sections/Playground/Burger';
 import { useDispatch, useSelector } from 'react-redux';
+import cx from 'classnames';
 import { AppDispatch, fetchQuestions, RootState } from 'store';
+import { Quiz } from 'features/Quiz';
+import { Burger } from 'components/Burger';
 import { Loader } from 'components/Loader';
 import styles from './Playground.module.scss';
 
