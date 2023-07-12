@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: linear-gradient(to bottom right, var(--bg-primary), var(--bg-primary) 50%, var(--bg-secondary) 50%, var(--bg-secondary));
+  background-image: linear-gradient(to bottom right, var(--color-main), var(--color-main) 50%, var(--bg-primary) 50%, var(--bg-primary));
 
   @include media-breakpoint-up(sm) {
     flex-direction: row;
