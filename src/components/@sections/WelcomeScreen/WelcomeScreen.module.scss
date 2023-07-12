@@ -1,0 +1,25 @@
+@use "styles/init" as *;
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, var(--bg-primary), var(--bg-primary) 50%, var(--bg-secondary) 50%, var(--bg-secondary));
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+  }
+}
+
+.image {
+  width: 450px;
+  height: auto;
+}
+
+.title {
+  @include font-size(56px, 64px);
+
+  font-weight: var(--font-weight-bold);
+}

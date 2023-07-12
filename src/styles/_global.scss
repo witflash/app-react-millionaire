@@ -1,0 +1,16 @@
+@use 'helpers/common' as h;
+
+html {
+  height: 100%;
+}
+
+body {
+  @include h.font-size(14px, 20px);
+
+  height: 100%;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
