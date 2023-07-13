@@ -7,5 +7,5 @@ interface GetQuestionsResponse {
 
 export const getQuestions = async (): Promise<GetQuestionsResponse> =>
   new Promise(resolve => {
-    setTimeout(() => resolve({ data: data.questions }), 2000);
+    setTimeout(() => resolve({ data: data.questions as QuizQuestion[] }), 2000);
   });

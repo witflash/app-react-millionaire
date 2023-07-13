@@ -1,5 +1,5 @@
 export * from './reduxStore';
 export * from './types';
 
-export * from './slices/gameStatusSlice';
+export * from 'store/slices/gameProcessSlice';
 export * from './slices/questionsSlice';
