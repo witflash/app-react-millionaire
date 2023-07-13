@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import cx from 'classnames';
 import { Frame } from 'components/Frame';
 import { Color } from 'common/types';
 import styles from './AnswerButton.module.scss';
@@ -15,13 +16,13 @@ function AnswerButton({
   onClick,
   letter,
   text,
-  color,
+  color = Color.default,
   isDisabled,
 }: AnswerButtonProps) {
   return (
     <button
       type="button"
-      className={styles.block}
+      className={cx(styles.block, styles[color])}
       onClick={onClick}
       disabled={isDisabled}
     >
