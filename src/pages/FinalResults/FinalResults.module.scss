@@ -3,3 +3,26 @@
 .block {
   position: relative;
 }
+
+.subtitle {
+  @include font-size(18px, 24px);
+
+  margin-bottom: 8px;
+  opacity: 0.5;
+
+  @include media-breakpoint-up(sm) {
+    @include font-size(32px, 40px);
+  }
+}
+
+.title {
+  @include font-size(32px, 40px);
+
+  font-weight: var(--font-weight-bold);
+
+  @include media-breakpoint-up(sm) {
+    @include font-size(56px, 64px);
+
+    margin-bottom: 64px;
+  }
+}

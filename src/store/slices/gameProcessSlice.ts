@@ -10,7 +10,7 @@ interface GameProcessState {
 
 const initialState: GameProcessState = {
   status: GameStatus.upcoming,
-  userEarned: null,
+  userEarned: 'level11',
 };
 
 export const gameProcessSlice = createSlice({
@@ -20,7 +20,7 @@ export const gameProcessSlice = createSlice({
     changeGameStatus: (state, action: PayloadAction<GameStatus>) => {
       state.status = action.payload;
     },
-    setUserEarning: (state, action: PayloadAction<QuizStage>) => {
+    setUserEarning: (state, action: PayloadAction<QuizStage | null>) => {
       state.userEarned = action.payload;
     },
   },

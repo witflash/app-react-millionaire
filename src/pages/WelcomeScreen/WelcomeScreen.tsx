@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { GameStatus, changeGameStatus } from 'store';
-import thumbImage from 'images/thumb.svg';
+import { Layout } from 'components/Layout';
 import styles from './WelcomeScreen.module.scss';
 
 function WelcomeScreen() {
@@ -12,17 +12,12 @@ function WelcomeScreen() {
   }, [dispatch]);
 
   return (
-    <div className={styles.block}>
-      <div>
-        <img src={thumbImage} alt="thumb up" className={styles.image} />
-      </div>
-      <div>
-        <h1 className={styles.title}>Who wants to be a millionaire?</h1>
-        <button type="button" onClick={handleStartClick}>
-          Start
-        </button>
-      </div>
-    </div>
+    <Layout className={styles.layout}>
+      <h1 className={styles.title}>Who wants to be a millionaire?</h1>
+      <button type="button" onClick={handleStartClick}>
+        Start
+      </button>
+    </Layout>
   );
 }
 
