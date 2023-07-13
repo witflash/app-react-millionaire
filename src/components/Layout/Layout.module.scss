@@ -1,0 +1,49 @@
+@use "styles/init" as *;
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 16px 16px 48px;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.imageWrapper {
+  margin-top: 80px;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 80px;
+  }
+}
+
+.image {
+  width: 200px;
+  height: auto;
+
+  @include media-breakpoint-up(sm) {
+    width: 300px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 450px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+}

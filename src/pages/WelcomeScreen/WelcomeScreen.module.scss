@@ -1,25 +1,15 @@
 @use "styles/init" as *;
 
-.block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.layout {
   background-image: linear-gradient(to bottom right, var(--color-main), var(--color-main) 50%, var(--bg-primary) 50%, var(--bg-primary));
-
-  @include media-breakpoint-up(sm) {
-    flex-direction: row;
-  }
-}
-
-.image {
-  width: 450px;
-  height: auto;
 }
 
 .title {
-  @include font-size(56px, 64px);
+  @include font-size(32px, 40px);
 
   font-weight: var(--font-weight-bold);
+
+  @include media-breakpoint-up(sm) {
+    @include font-size(56px, 64px);
+  }
 }
