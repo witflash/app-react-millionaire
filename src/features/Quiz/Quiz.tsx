@@ -2,8 +2,8 @@ import { memo, useCallback, useState } from 'react';
 import { QuizQuestion } from 'common/types';
 import { answerLetters } from 'common/config';
 import { useCheckAnswer } from 'common/hooks/useCheckAnswer';
-import AnswerButton from 'features/Quiz/AnswerButton';
-import { getButtonColor } from 'features/Quiz/helpers';
+import { AnswerButton } from 'components/AnswerButton';
+import { getButtonColor } from './helpers';
 import styles from './Quiz.module.scss';
 
 interface QuizProps {
