@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/app-react-millionaire/static/css/main.6e41a406.css",
-    "main.js": "/app-react-millionaire/static/js/main.68c5c2a2.js",
+    "main.css": "/app-react-millionaire/static/css/main.0aa2934d.css",
+    "main.js": "/app-react-millionaire/static/js/main.8aa25627.js",
+    "static/media/thumb.svg": "/app-react-millionaire/static/media/thumb.03129479706db737116cd068f32ec824.svg",
     "index.html": "/app-react-millionaire/index.html",
-    "main.6e41a406.css.map": "/app-react-millionaire/static/css/main.6e41a406.css.map",
-    "main.68c5c2a2.js.map": "/app-react-millionaire/static/js/main.68c5c2a2.js.map"
+    "main.0aa2934d.css.map": "/app-react-millionaire/static/css/main.0aa2934d.css.map",
+    "main.8aa25627.js.map": "/app-react-millionaire/static/js/main.8aa25627.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e41a406.css",
-    "static/js/main.68c5c2a2.js"
+    "static/css/main.0aa2934d.css",
+    "static/js/main.8aa25627.js"
   ]
 }
