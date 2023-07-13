@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders Loader component', () => {
   render(<App />);
-  const loaderElement = screen.getByText(/loading/i);
+  const loaderElement = screen.getByText(/Who wants to be a millionaire/i);
   expect(loaderElement).toBeInTheDocument();
 });
