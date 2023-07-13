@@ -5,16 +5,21 @@ import { AppDispatch, fetchQuestions, RootState } from 'store';
 import { Quiz } from 'features/Quiz';
 import { Burger } from 'components/Burger';
 import { Loader } from 'components/Loader';
+import { useQuestionByStage } from 'common/hooks/useQuestionByStage';
 import styles from './Playground.module.scss';
 
 function Playground() {
   const [isStagesOpened, setIsStagesOpened] = useState(false);
+  const { userEarned } = useSelector((state: RootState) => state.gameProcess);
   const { entities: questions, loading } = useSelector(
     (state: RootState) => state.questions,
   );
+
   const dispatch = useDispatch<AppDispatch>();
   console.log('questions: ', questions);
   console.log('loading: ', loading);
+
+  const { question } = useQuestionByStage({ prevStage: userEarned });
 
   const toggleMenu = useCallback(() => {
     setIsStagesOpened(state => !state);
@@ -32,24 +37,19 @@ function Playground() {
     <div className={styles.block}>
       <div className={styles.wrapper}>
         <div className={styles.quiz}>
-          <Quiz
-            question={{
-              id: 1,
-              text: 'Test',
-              answers: [{ id: 1, text: 'Answer' }],
-              correctAnswerIds: [1],
-              earning: 500,
-            }}
-          />
+          <Quiz question={question} />
         </div>
 
         <div className={cx(styles.stages, isStagesOpened && styles.opened)}>
           <p>Stages</p>
         </div>
       </div>
-      <div className={styles.burger}>
-        <Burger onClick={toggleMenu} isOpened={isStagesOpened} />
-      </div>
+
+      <Burger
+        className={styles.burger}
+        onClick={toggleMenu}
+        isOpened={isStagesOpened}
+      />
     </div>
   );
 }

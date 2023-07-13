@@ -1,19 +1,18 @@
 export type ID = number;
 
-export enum QuizStage {
-  level1 = 500,
-  level2 = 1000,
-  level3 = 2000,
-  level4 = 4000,
-  level5 = 8000,
-  level6 = 16000,
-  level7 = 32000,
-  level8 = 64000,
-  level9 = 125000,
-  level10 = 250000,
-  level11 = 500000,
-  level12 = 1000000,
-}
+export type QuizStage =
+  | 'level1'
+  | 'level2'
+  | 'level3'
+  | 'level4'
+  | 'level5'
+  | 'level6'
+  | 'level7'
+  | 'level8'
+  | 'level9'
+  | 'level10'
+  | 'level11'
+  | 'level12';
 
 export interface QuizAnswer {
   id: ID;
@@ -25,5 +24,5 @@ export interface QuizQuestion {
   text: string;
   answers: QuizAnswer[];
   correctAnswerIds: ID[];
-  earning: number;
+  stage: QuizStage;
 }

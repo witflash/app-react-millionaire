@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import gameStatusReducer from './slices/gameStatusSlice';
+import gameProcessSlice from 'store/slices/gameProcessSlice';
 import questionsReducer from './slices/questionsSlice';
 
 export const reduxStore = configureStore({
   reducer: {
-    gameStatus: gameStatusReducer,
+    gameProcess: gameProcessSlice,
     questions: questionsReducer,
   },
 });

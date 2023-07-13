@@ -6,7 +6,9 @@ import { FinalResults } from 'pages/FinalResults';
 import 'styles/base.scss';
 
 function App() {
-  const gameStatus = useSelector((state: RootState) => state.gameStatus.value);
+  const gameStatus = useSelector(
+    (state: RootState) => state.gameProcess.status,
+  );
 
   return (
     <>
