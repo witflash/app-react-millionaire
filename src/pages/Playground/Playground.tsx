@@ -6,18 +6,15 @@ import { Quiz } from 'features/Quiz';
 import { Burger } from 'components/Burger';
 import { Loader } from 'components/Loader';
 import { useQuestionByStage } from 'common/hooks/useQuestionByStage';
+import { Stages } from 'features/Stages';
 import styles from './Playground.module.scss';
 
 function Playground() {
   const [isStagesOpened, setIsStagesOpened] = useState(false);
   const { userEarned } = useSelector((state: RootState) => state.gameProcess);
-  const { entities: questions, loading } = useSelector(
-    (state: RootState) => state.questions,
-  );
+  const { loading } = useSelector((state: RootState) => state.questions);
 
   const dispatch = useDispatch<AppDispatch>();
-  console.log('questions: ', questions);
-  console.log('loading: ', loading);
 
   const { question } = useQuestionByStage({ prevStage: userEarned });
 
@@ -41,7 +38,7 @@ function Playground() {
         </div>
 
         <div className={cx(styles.stages, isStagesOpened && styles.opened)}>
-          <p>Stages</p>
+          <Stages />
         </div>
       </div>
 

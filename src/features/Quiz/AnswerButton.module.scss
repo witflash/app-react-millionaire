@@ -11,12 +11,27 @@
     color: inherit;
   }
 
+  &.default:before, &.default:after {
+    background-color: var(--color-disabled);
+  }
+
+  &.error:before, &.error:after {
+    background-color: var(--color-error);
+  }
+
+  &.accent:before, &.accent:after {
+    background-color: var(--color-accent);
+  }
+
+  &.success:before, &.success:after {
+    background-color: var(--color-success);
+  }
+
   &:before, &:after {
     content: '';
     position: absolute;
     width: 20px;
     height: 1px;
-    background-color: var(--color-disabled);
     top: calc(50% - 0.5px);
   }
 
