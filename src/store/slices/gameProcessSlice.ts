@@ -10,7 +10,7 @@ interface GameProcessState {
 
 const initialState: GameProcessState = {
   status: GameStatus.upcoming,
-  userEarned: 'level11',
+  userEarned: null,
 };
 
 export const gameProcessSlice = createSlice({

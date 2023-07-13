@@ -26,8 +26,8 @@ function AnswerButton({
       onClick={onClick}
       disabled={isDisabled}
     >
-      <Frame color={color} hasAnimation>
-        <div className={styles.frame}>
+      <Frame color={color} svgClassName={styles.svgFrame} hasAnimation>
+        <div className={styles.frameContent}>
           <span className={styles.letter}>{letter}</span>
           <span className={styles.text}>{text}</span>
         </div>

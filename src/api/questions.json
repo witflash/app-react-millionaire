@@ -74,26 +74,26 @@
     },
     {
       "id": 4,
-      "text": "Galileo was an Italian astronomer who",
+      "text": "What book did Edgar Rice Burroughs write?",
       "answers": [
         {
           "id": 13,
-          "text": "developed the telescope"
+          "text": "Moby-Dick"
         },
         {
           "id": 14,
-          "text": "discovered four satellites of Jupiter"
+          "text": "A Princess of Mars"
         },
         {
           "id": 15,
-          "text": "discovered that the movement of pendulum produces a regular time measurement"
+          "text": "Tom Sawyer"
         },
         {
           "id": 16,
-          "text": "All of the above"
+          "text": "The Little Prince"
         }
       ],
-      "correctAnswerIds": [16],
+      "correctAnswerIds": [14],
       "stage": "level4"
     },
     {
