@@ -26,3 +26,9 @@
     margin-bottom: 64px;
   }
 }
+
+.button {
+  @include media-breakpoint-up(sm) {
+    max-width: 300px;
+  }
+}

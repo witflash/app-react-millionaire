@@ -11,5 +11,13 @@
 
   @include media-breakpoint-up(sm) {
     @include font-size(56px, 64px);
+
+    margin-bottom: 64px;
+  }
+}
+
+.button {
+  @include media-breakpoint-up(sm) {
+    max-width: 300px;
   }
 }

@@ -6,6 +6,7 @@ import styles from './Frame.module.scss';
 interface FrameProps {
   children: ReactNode;
   className?: string;
+  svgClassName?: string;
   color?: Color;
   hasAnimation?: boolean;
   isOutline?: boolean;
@@ -14,6 +15,7 @@ interface FrameProps {
 function Frame({
   children,
   className,
+  svgClassName,
   color = Color.default,
   hasAnimation = false,
   isOutline = false,
@@ -25,6 +27,7 @@ function Frame({
         className={cx(
           styles.svg,
           styles[color],
+          svgClassName,
           hasAnimation && styles.animated,
           isOutline && styles.outline,
         )}

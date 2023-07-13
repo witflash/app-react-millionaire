@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeGameStatus, GameStatus, RootState, setUserEarning } from 'store';
 import { Layout } from 'components/Layout';
 import { LEVEL_EARNINGS } from 'common/config';
+import { Button } from 'components/Button';
 import styles from './FinalResults.module.scss';
 
 function FinalResults() {
@@ -36,9 +37,13 @@ function FinalResults() {
             : 'You have earned nothing :('}
         </h2>
       </div>
-      <button type="button" onClick={handleRestartClick}>
-        Try again
-      </button>
+      <div>
+        <Button
+          onClick={handleRestartClick}
+          text="Try again"
+          className={styles.button}
+        />
+      </div>
     </Layout>
   );
 }
