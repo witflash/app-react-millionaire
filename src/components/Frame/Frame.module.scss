@@ -2,4 +2,60 @@
 
 .block {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &.default {
+    stroke: var(--color-disabled);
+    fill: var(--color-main);
+  }
+
+  &.accent {
+    stroke: var(--color-accent);
+    fill: var(--color-accent-light);
+
+    &.animated {
+      animation: blink 200ms 4;
+    }
+  }
+
+  &.error {
+    stroke: var(--color-error);
+    fill: var(--color-error-light);
+  }
+
+  &.success {
+    stroke: var(--color-success);
+    fill: var(--color-success-light);
+  }
+
+  &.outline {
+    fill: none;
+  }
+}
+
+.content {
+  position: relative;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }

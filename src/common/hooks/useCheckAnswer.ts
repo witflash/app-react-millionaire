@@ -8,6 +8,7 @@ import { isLastStage } from 'common/helpers/isLastStage';
 interface UseCheckAnswerArg {
   question: QuizQuestion;
   userAnswerId: ID | null;
+  onComplete: () => void;
 }
 
 interface UseCheckAnswerReturn {
@@ -18,6 +19,7 @@ interface UseCheckAnswerReturn {
 export function useCheckAnswer({
   question,
   userAnswerId,
+  onComplete,
 }: UseCheckAnswerArg): UseCheckAnswerReturn {
   const [isCompleted, setIsCompleted] = useState(false);
   const { userEarned } = useSelector((state: RootState) => state.gameProcess);
@@ -48,6 +50,7 @@ export function useCheckAnswer({
 
         dispatch(setUserEarning(nextStage));
         setIsCompleted(false);
+        onComplete();
 
         if (isLastStage(nextStage)) {
           dispatch(changeGameStatus(GameStatus.finished));
@@ -62,7 +65,7 @@ export function useCheckAnswer({
     }
 
     return () => clearTimeout(timeout);
-  }, [isCompleted, isCorrect, userEarned, dispatch]);
+  }, [isCompleted, isCorrect, userEarned, dispatch, onComplete]);
 
   return {
     isCorrect,

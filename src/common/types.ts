@@ -26,3 +26,10 @@ export interface QuizQuestion {
   correctAnswerIds: ID[];
   stage: QuizStage;
 }
+
+export enum Color {
+  default = 'default',
+  accent = 'accent',
+  error = 'error',
+  success = 'success',
+}
