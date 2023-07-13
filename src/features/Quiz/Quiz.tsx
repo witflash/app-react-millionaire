@@ -1,9 +1,9 @@
-import { memo, useState } from 'react';
-import { Frame } from 'components/Frame';
-
+import { memo, useCallback, useState } from 'react';
 import { QuizQuestion } from 'common/types';
 import { answerLetters } from 'common/config';
 import { useCheckAnswer } from 'common/hooks/useCheckAnswer';
+import AnswerButton from 'features/Quiz/AnswerButton';
+import { getButtonColor } from 'features/Quiz/helpers';
 import styles from './Quiz.module.scss';
 
 interface QuizProps {
@@ -12,27 +12,32 @@ interface QuizProps {
 
 function Quiz({ question }: QuizProps) {
   const [userAnswerId, setUserAnswerId] = useState<number | null>(null);
-  const { isCompleted, isCorrect } = useCheckAnswer({ question, userAnswerId });
-  console.log('isCompleted, isCorrect: ', isCompleted, isCorrect);
+  const clearAnswer = useCallback(() => setUserAnswerId(null), []);
+
+  const { isCompleted, isCorrect } = useCheckAnswer({
+    question,
+    userAnswerId,
+    onComplete: clearAnswer,
+  });
 
   return (
     <div className={styles.block}>
-      <p>{question.text}</p>
+      <p className={styles.question}>{question.text}</p>
 
-      <div>
+      <div className={styles.buttons}>
         {question.answers.map((answer, index) => (
-          <button
-            type="button"
+          <AnswerButton
             key={answer.id}
             onClick={() => setUserAnswerId(answer.id)}
-          >
-            <Frame>
-              <div>
-                <span>{answerLetters[index]}</span>
-                <span>{answer.text}</span>
-              </div>
-            </Frame>
-          </button>
+            letter={answerLetters[index]}
+            text={answer.text}
+            color={getButtonColor({
+              isSelected: userAnswerId === answer.id,
+              isError: userAnswerId === answer.id && isCompleted && !isCorrect,
+              isSuccess: userAnswerId === answer.id && isCompleted && isCorrect,
+            })}
+            isDisabled={Boolean(userAnswerId)}
+          />
         ))}
       </div>
     </div>

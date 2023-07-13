@@ -1,0 +1,59 @@
+@use "styles/init" as *;
+
+.block {
+  @include reset-button();
+
+  display: block;
+  position: relative;
+  width: 100%;
+
+  &:disabled {
+    color: inherit;
+  }
+
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background-color: var(--color-disabled);
+    top: calc(50% - 0.5px);
+  }
+
+  &:before {
+    right: calc(100% - 2px);
+  }
+
+  &:after {
+    left: calc(100% - 2px);
+  }
+}
+
+.frame {
+  padding: 16px 32px;
+  text-align: left;
+
+  @include media-breakpoint-up(sm) {
+    padding: 24px 44px;
+  }
+}
+
+.letter {
+  @include font-size(14px);
+
+  margin-right: 8px;
+  color: var(--color-accent);
+  font-weight: var(--font-weight-bold);
+
+  @include media-breakpoint-up(sm) {
+    @include font-size(20px);
+  }
+}
+
+.text {
+  @include font-size(14px);
+
+  @include media-breakpoint-up(sm) {
+    @include font-size(20px);
+  }
+}
